@@ -1,4 +1,6 @@
-  
+$token = Cache::remember('unity_jwt', 3500, function () {
+    return fetchNewJwt(); // Your token retrieval logic
+});  
   
 Optimizing a Laravel application involves improving request performance, minimizing database load, and ensuring code is structured and maintainable. Below are strategies and examples, including how to write optimized helper functions like a settings retriever.
 ## 1. Caching Configuration and Settings  
